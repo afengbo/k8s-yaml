@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: apollo-configservice-cm
+  namespace: infra
+data:
+  application-github.properties: |
+    spring.datasource.url = jdbc://172.30.3.25:3306/ApolloConfigDB?characterEncoding=utf8
+    spring.datasource.username = servicedesk
+    spring.datasource.password = servicedesk2017
+    eureka.service.url = http://172.30.0.200:32001/eureka
+  app.properties: |
+    appId=100003171

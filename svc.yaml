@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: apollo-configservice
+  namespace: infra
+spec:
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    nodePort: 32001
+  selector:
+    app: apollo-configservice
